@@ -2,19 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
 
+  username: gabriel
+  password: 600425
+
+  database: devise_example
 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: devise_example_development
 
 test:
   <<: *default
-  database: devise_example_test
 
 production:
   <<: *default
-  database: devise_example_production
-  username: devise_example
-  password: <%= ENV['DEVISE_EXAMPLE_DATABASE_PASSWORD'] %>
