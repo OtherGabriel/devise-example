@@ -1,3 +1,12 @@
+/* d e f a u l t */
+
+html,
+body {
+  background-color: gray;
+}
+
+/* p a g e s */
+
 .room {
   display: flex;
   flex-direction: column;

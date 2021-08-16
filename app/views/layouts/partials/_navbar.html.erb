@@ -1,14 +1,22 @@
-<div class="navbar">
+<div class="partials navbar">
   <h1 class="title">Navbar</h1>
 
-  <section class="links">
-    <% if user_signed_in? %>
-      Logado como: <strong><%= current_user.email %></strong>.
-      <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Registrar-se", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-  </section>
+  <div class="links">
+    logged in as: <strong><%= current_user.email %></strong>.
+    <%= link_to "profile edit", edit_user_registration_path %> |
+    <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+  </div>
 </div>
+
+<!--
+  if you don't want that your users don't login, use the down code like example:
+
+    <% if user_signed_in? %>
+      logged in as: <strong><%= current_user.email %></strong>.
+      <%= link_to "profile edit", edit_user_registration_path %> |
+      <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "sign up", new_user_registration_path %> |
+      <%= link_to "sign in", new_user_session_path %>
+    <% end %>
+-->
