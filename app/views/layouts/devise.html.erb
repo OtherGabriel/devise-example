@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DeviseExample</title>
+    <title>layout by devise</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <%= render 'layouts/partials/navbar' %>
-
-    <%= yield %>
+    <div class="room">
+      <%= yield %>
+    </div>
   </body>
 </html>
