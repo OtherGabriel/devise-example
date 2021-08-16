@@ -1,4 +1,15 @@
-html,
-body {
-  background-color: gray;
+/* d e f a u l t */
+
+/* p a g e s */
+
+.room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  border: solid 7px gray;
 }

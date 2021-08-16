@@ -1,4 +1,6 @@
 /*
+ *= require ./global
+ *
  *= require ./devise_style/main
  *
  *= require_self
