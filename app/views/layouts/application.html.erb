@@ -10,12 +10,7 @@
   </head>
 
   <body>
-    <% if notice %>
-      <p><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p><%= alert %></p>
-    <% end %>
+    <%= render 'layouts/partials/navbar' %> 
 
     <%= yield %>
   </body>
